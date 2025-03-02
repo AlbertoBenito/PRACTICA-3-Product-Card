@@ -1,0 +1,110 @@
+@use '../mixins/responsive.scss' as *;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.card{
+    @include responsive(768px){
+        display: flex;
+        width: 600px;
+        height: 450px;
+        
+        }
+    
+    background-color: #FFFFFF;
+    width: 343px;
+    height: 611px;
+    border-radius: 10px;
+    &_info{
+        @include responsive(768px){
+            
+            width: 50%
+            }
+    }
+    &_picture{
+        @include responsive(768px){
+            height: 100%;
+            width: 100%;
+            border-radius: 10px 0px 0px 10px ;
+            }
+        border-radius: 10px 0px 10px 0px;
+    }
+    &_perfume{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        color: #6C7289;
+        margin-left: 24px;
+        margin-bottom: 12px;
+        @include responsive(768px){
+           margin-top: 32px;
+            }
+    }
+    &_title{
+        font-family: 'Fraunces', sans-serif;
+        font-size: 32px;
+        line-height: 32px;
+        color: #1C232B;
+        margin-left: 24px;
+        margin-bottom: 12px;
+    }
+    &_generalText{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        line-height: 23px;
+        color: #6C7289;
+        margin: 0 24px;
+        
+    }
+
+    &_prices{
+        display: flex;
+        margin-left: 24px;
+        align-items: center;
+        .price{
+            font-family: 'Fraunces', sans-serif;
+            font-size: 32px;
+            line-height: 32px;
+            color: #3D8168;
+            margin-right: 19px;
+            margin-bottom: 20px;
+        }
+        .priceCrossed{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            line-height: 23px;
+            color: #6C7289;
+            text-decoration: line-through;
+        }
+    }
+    &_button{
+        display: flex;
+        background-color: #3D8168;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+        width: 295px;
+        border-radius: 8px;
+        border: none;
+        color: #FFFFFF;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        @include responsive(768px){
+            height: 48px;
+            width:238px;
+            }
+        
+        .button_icon{
+            align-items: center;
+            width: 14.39px;
+            height: 16px;
+            margin-right: 11.61px;
+        }
+        .button_text{
+            font-weight: bold;
+        }
+
+    }
+    
+}
